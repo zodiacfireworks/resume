@@ -1,6 +1,7 @@
-### Resume ###
+### Directories ###
 build/*
 !build/.gitkeep
+!build/*.pdf
 old/
 src/*.pdf
 
@@ -28,4 +29,3 @@ src/*.pdf
 ### Mac OS X ###
 ## Mac OS X metadata files:
 *.DS_Store
-
