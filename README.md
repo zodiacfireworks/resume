@@ -1,18 +1,26 @@
 <h1
     align="center">
-    <img 
-        alt="AwesomeCV" 
-        src="./icon.png" 
-        width="100px" 
-        height="100px"/>
-    <br/>
-    Mi <em>Awesome</em> Currículo
+    <div 
+        align="center">    
+        <img 
+            alt="AwesomeCV" 
+            src="./icon.png" 
+            width="100px" 
+            height="100px"/>
+        <br/>
+        Mi <em>Awesome</em> Currículo
+    </div>
 </h1>
 
-<p 
+
+<div 
     align="center">
-    En mi CV indico que tengo conocimientos de LaTeX, y a mi parecer es un buen <em>skill</em>. ¿Qué mejor forma de resaltarlo que escribiendo mi CV en LaTeX?
-</p>
+    <p>
+    En mi CV indico que tengo conocimientos de LaTeX que, a mi parecer, es excelente <em>skill</em>. 
+    <br/>
+    ¿Qué mejor forma de resaltarlo que escribiendo mi currículo en LaTeX?
+    </p>
+</div>
 
 <div
     align="center">
@@ -32,15 +40,18 @@
         src="./sample.png"/>
 </div>
 
-<p 
+
+<div 
     align="center">
-    Hecho con el <em>template</em>
-    <a 
-        href="https://github.com/posquit0/Awesome-CV"
-        target="_blank">
-        Awesome CV
-    </a>.
-</p>
+    <p>
+        Hecho con el <em>template</em>
+        <a 
+            href="https://github.com/posquit0/Awesome-CV"
+            target="_blank">
+            Awesome CV
+        </a>.
+    </p>
+</div>
 
 <div
     align="center">
