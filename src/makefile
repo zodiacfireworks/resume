@@ -15,4 +15,4 @@ clean: clean-custom
 	rm -rf *.pdf $(OUT_DIR)/*.pdf
 
 $(OUT):
-	$(TEX) -output-directory=$(OUT_DIR) $(SRC) && $(TEX) -output-directory=$(OUT_DIR) $(SRC) && make clean-custom
+	$(TEX) -shell-escape -output-directory=$(OUT_DIR) $(SRC) && $(TEX) -shell-escape -output-directory=$(OUT_DIR) $(SRC) && make clean-custom

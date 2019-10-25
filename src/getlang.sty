@@ -1,0 +1,15 @@
+% Identify this package.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{getlang}[2016/11/23 v4.7.0 font awesome icons]
+
+% Requirements to use.
+\usepackage{getenv}
+\usepackage{ifthen}
+
+% Define shortcut to load the Font Awesome font.
+\getenv[\LANG]{LANG}
+\newcommand{\currentLang}{\LANG}
+\newcommand{\esLang}{es}
+\newcommand{\enLang}{en}
+
+\newcommand{\ifLang}[2]{\ifthenelse{\equal{\currentLang}{#1}}{#2}{}}

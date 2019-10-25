@@ -1,0 +1,28 @@
+% Identify this package.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{getenv}[2016/11/23 v4.7.0 font awesome icons]
+
+% Requirements to use.
+\usepackage{ifxetex}
+\usepackage{ifluatex}
+
+% Define shortcut to load the Font Awesome font.
+\ifxetex
+  \usepackage{catchfile}
+  \newcommand\getenv[2][]{%
+    \immediate\write18{kpsewhich --var-value #2 > \jobname.tmp}%
+    \CatchFileDef{\temp}{\jobname.tmp}{\endlinechar=-1}%
+    \if\relax\detokenize{#1}\relax\temp\else\let#1\temp\fi}
+\else
+  \ifluatex
+    \newcommand\getenv[2][]{%
+      \edef\temp{\directlua{tex.sprint(
+        kpse.var_value("\luatexluaescapestring{#2}") or "" ) }}%
+      \if\relax\detokenize{#1}\relax\temp\else\let#1\temp\fi}
+  \else
+    \usepackage{catchfile}
+    \newcommand{\getenv}[2][]{%
+      \CatchFileEdef{\temp}{"|kpsewhich --var-value #2"}{\endlinechar=-1}%
+      \if\relax\detokenize{#1}\relax\temp\else\let#1\temp\fi}
+  \fi
+\fi
