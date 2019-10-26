@@ -1,18 +1,22 @@
+LANG    = "${LANG:-es}"
 TEX     = xelatex
 SRC_DIR = resume
 SRC     = resume.tex $(shell find $(SRC_DIR) -name '*.tex')
 OUT_DIR = ../build
-OUT     = $(OUT_DIR)/resume.pdf
+OUT     = resume.pdf
 
 .PHONY: all all-before all-after clean-custom clean
 
 all: clean $(OUT) clean-custom
 
 clean-custom:
-	rm -rf  *.aux $(OUT_DIR)/*.aux *.lof $(OUT_DIR)/*.lof *.log $(OUT_DIR)/*.log *.lot $(OUT_DIR)/*.lot *.fls $(OUT_DIR)/*.fls *.out $(OUT_DIR)/*.out *.toc $(OUT_DIR)/*.toc *.fdb_latexmk $(OUT_DIR)/*.fdb_latexmk *.synctex.gz $(OUT_DIR)/*.synctex.gz
+	rm -rf *.aux *.lof  *.log *.lot  *.fls *.out  *.toc *.fdb_latexmk  *.synctex.gz *.tmp
 
 clean: clean-custom
-	rm -rf *.pdf $(OUT_DIR)/*.pdf
+	rm -rf *.pdf
+
+clean-all: clean
+	rm -rf $(OUT_DIR)/*pdf
 
 $(OUT):
-	$(TEX) -shell-escape -output-directory=$(OUT_DIR) $(SRC) && $(TEX) -shell-escape -output-directory=$(OUT_DIR) $(SRC) && make clean-custom
+	LANG=$(LANG) $(TEX) -shell-escape $(SRC) && $(TEX) -shell-escape $(SRC) && mv $(OUT) $(OUT_DIR)/resume_$(LANG).pdf

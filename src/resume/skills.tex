@@ -1,43 +1,65 @@
 %	SECTION TITLE ----------------------------------------------------------------
-\cvsection{Habilidades}
+\ifLang{\esLang}{\cvsection{Habilidades}}
+\ifLang{\enLang}{\cvsection{Skills}}
 
 %	CONTENT ----------------------------------------------------------------------
 \begin{cvskills}
 
   %----------
   \cvskill
-    {Programación} % Category
+    {
+      \ifLang{\esLang}{Programación}
+      \ifLang{\enLang}{Programming}
+    } % Category
     {Python, C, C++, C\#, Fortran, Matlab, Mathematica, JavaScript, LaTeX, Java, Julia, Kotlin} % Skills
 
   %----------
   \cvskill
-    {Librerías} % Category
-    {LAPACK, BLAS, Intel MKL, ILnumerics, OpenCV, Cuda, OpenGL, SFML} % Skills
+  {
+    \ifLang{\esLang}{Librerías}
+    \ifLang{\enLang}{Libraries}
+  } % Category
+  {LAPACK, BLAS, Intel MKL, ILnumerics, OpenCV, Cuda, OpenGL, SFML} % Skills
 
   %----------
   \cvskill
-    {Mobile} % Category
+    {
+      \ifLang{\esLang}{Móvil}
+      \ifLang{\enLang}{Mobile}
+    } % Category
     {Android} % Skills
 
   %----------
   \cvskill
-    {Web} % Category
+    {
+      \ifLang{\esLang}{Web}
+      \ifLang{\enLang}{Web}
+    } % Category
     {Wagtail, Django, Flask, Express, HTML5, CSS3, SASS, Gulp} % Skills
 
   %----------
   \cvskill
-    {Base de Datos} % Category
+    {
+      \ifLang{\esLang}{Base de Datos}
+      \ifLang{\enLang}{Databases}
+    } % Category
     {MySql, MariaDB, PostgreSql, Redis, SQLite} % Skills
 
   %----------
   \cvskill
-    {Cloud} % Category
+    {
+      \ifLang{\esLang}{Cloud}
+      \ifLang{\enLang}{Cloud}
+    } % Category
     {IBM Bluemix, Google Cloud Platform, Amazon Web Services} % Skills
 
   %----------
   \cvskill
-    {Idiomas} % Category
-    {Español, Inglés} % Skills
+  {
+    \ifLang{\esLang}{Idiomas}
+    \ifLang{\enLang}{Languages}
+  } % Category
+  {Español, Inglés} % Skills
 
 %---------------------------------------------------------
 \end{cvskills}

@@ -5,11 +5,11 @@
 \usepackage{fontawesome}
 \usepackage{polyglossia}
 \usepackage{getlang}
-\setmainlanguage{spanish}
 
 % Ajustes
+\ifLang{\esLang}{\setmainlanguage{spanish}}
+\ifLang{\enLang}{\setmainlanguage{english}}
 % \fontdir[fonts/]
-
 \definecolor{red-softbutterfly}{rgb}{0.7843137254901961, 0.21568627450980393, 0.21568627450980393}
 \colorlet{awesome}{red-softbutterfly}
 
