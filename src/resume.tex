@@ -32,12 +32,17 @@
 % Available options: circle|rectangle,edge3/noedge,left/right
 % \photo[rectangle,edge,right]{./examples/profile}
 \name{Martín}{Vuelta}
-\position{Desarrollador de Software{\enskip\cdotp\enskip} Investigador}
+\position{
+  \ifLang{\esLang}{Desarrollador de Software}
+  \ifLang{\enLang}{Software Developer}
+  {\enskip\cdotp\enskip}
+  \ifLang{\esLang}{Investigador}
+  \ifLang{\enLang}{Researcher}
+}
 \address{Av. Metropolitana 742, Urb. San Eulogio, Comas, Lima, Lima, Perú}
 
 \mobile{(+51) 982042088}
 \email{martin.vuelta@gmail.com}
-\homepage{martin.vuelta.me}
 \github{zodiacfireworks}
 \linkedin{martinvuelta}
 % \gitlab{gitlab-id}
@@ -46,7 +51,6 @@
 % \skype{skype-id}
 % \reddit{reddit-id}
 % \extrainfo{extra informations}
-
 % \quote{``Sé el cambio que deseas ver en el mundo."}
 
 %-------------------------------------------------------------------------------
@@ -54,13 +58,18 @@
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[C]
+\makecvheader[L]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Martín Vuelta~~~·~~~Currículo}
+  {
+    Martín Vuelta
+    ~~~·~~~
+    \ifLang{\esLang}{Currículo}
+    \ifLang{\enLang}{CV}
+  }
   {\thepage}
 
 
