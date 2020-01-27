@@ -23,7 +23,8 @@
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-
+\newcommand{\present}{\ifLang{\esLang}{PRESENTE}\ifLang{\enLang}{PRESENT}}
+\newcommand{\translate}[2]{\ifLang{\esLang}{#1}\ifLang{\enLang}{#2}}
 
 %-------------------------------------------------------------------------------
 % PERSONAL INFORMATION
@@ -33,11 +34,9 @@
 % \photo[rectangle,edge,right]{./examples/profile}
 \name{Martín}{Vuelta}
 \position{
-  \ifLang{\esLang}{Desarrollador de Software}
-  \ifLang{\enLang}{Software Developer}
+  \translate{Desarrollador de Software}{Software Developer}
   {\enskip\cdotp\enskip}
-  \ifLang{\esLang}{Investigador}
-  \ifLang{\enLang}{Researcher}
+  \translate{Investigador}{Researcher}
 }
 \address{Av. Metropolitana 742, Urb. San Eulogio, Comas, Lima, Lima, Perú}
 
@@ -67,8 +66,7 @@
   {
     Martín Vuelta
     ~~~·~~~
-    \ifLang{\esLang}{Currículo}
-    \ifLang{\enLang}{CV}
+    \translate{Currículo}{CV}
   }
   {\thepage}
 
