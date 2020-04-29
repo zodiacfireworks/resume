@@ -41,7 +41,7 @@
 <div
     align="center">
     <p>
-    In my CV I indicate that I have knowledge of LaTeX which, in my opinion, is excellent <em>skill</em>.
+    In my CV I point out that I have knowledge of LaTeX which, in my opinion, is excellent <em>skill</em>.
     <br/>
     What better way to highlight it than writing my resume in LaTeX?
     </p>
