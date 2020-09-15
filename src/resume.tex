@@ -9,9 +9,10 @@
 % Ajustes
 \ifLang{\esLang}{\setmainlanguage{spanish}}
 \ifLang{\enLang}{\setmainlanguage{english}}
-% \fontdir[fonts/]
+\fontdir[fonts/]
 \definecolor{red-softbutterfly}{rgb}{0.7843137254901961, 0.21568627450980393, 0.21568627450980393}
-\colorlet{awesome}{red-softbutterfly}
+% \colorlet{awesome}{red-softbutterfly}
+\colorlet{awesome}{awesome-red}
 
 \definecolor{darktext}{HTML}{424242}
 \definecolor{text}{HTML}{212121}
@@ -23,8 +24,14 @@
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\present}{\ifLang{\esLang}{PRESENTE}\ifLang{\enLang}{PRESENT}}
-\newcommand{\translate}[2]{\ifLang{\esLang}{#1}\ifLang{\enLang}{#2}}
+\newcommand{\present}{
+  \ifLang{\esLang}{PRESENTE}%
+  \ifLang{\enLang}{PRESENT}%
+}
+\newcommand{\translate}[2]{
+  \ifLang{\esLang}{#1}%
+  \ifLang{\enLang}{#2}%
+}
 
 %-------------------------------------------------------------------------------
 % PERSONAL INFORMATION
@@ -57,18 +64,18 @@
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[L]
+\makecvheader[C]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
-  {\today}
-  {
-    Martín Vuelta
-    ~~~·~~~
-    \translate{Currículo}{CV}
-  }
-  {\thepage}
+{\today}
+{
+  Martín Vuelta
+  ~~~·~~~
+  \translate{Currículo}{CV}
+}
+{\thepage}
 
 
 %-------------------------------------------------------------------------------
@@ -76,12 +83,12 @@
 % Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 \input{resume/summary.tex}
-\input{resume/education.tex}
-\input{resume/skills.tex}
 \input{resume/experience.tex}
-\input{resume/honors.tex}
-\input{resume/presentations.tex}
+\input{resume/skills.tex}
+\input{resume/education.tex}
 \input{resume/courses.tex}
+\input{resume/presentations.tex}
+\input{resume/honors.tex}
 
 %-------------------------------------------------------------------------------
 \end{document}
