@@ -2,17 +2,15 @@
 %!TEX encoding = UTF-8 Unicode
 % Preambulo --------------------------------------------------------------------
 \documentclass[11pt, a4paper]{awesome-cv}
-\usepackage{fontawesome}
 \usepackage{polyglossia}
 \usepackage{getlang}
 
-% Ajustes
 \ifLang{\esLang}{\setmainlanguage{spanish}}
 \ifLang{\enLang}{\setmainlanguage{english}}
 \fontdir[fonts/]
 \definecolor{red-softbutterfly}{rgb}{0.7843137254901961, 0.21568627450980393, 0.21568627450980393}
-% \colorlet{awesome}{red-softbutterfly}
-\colorlet{awesome}{awesome-red}
+\colorlet{awesome}{red-softbutterfly}
+%\colorlet{awesome}{awesome-red}
 
 \definecolor{darktext}{HTML}{424242}
 \definecolor{text}{HTML}{212121}
@@ -41,11 +39,13 @@
 % \photo[rectangle,edge,right]{./examples/profile}
 \name{Martín}{Vuelta}
 \position{
-  \translate{Desarrollador de Software}{Software Developer}
-  {\enskip\cdotp\enskip}
-  \translate{Investigador}{Researcher}
+  \translate{
+    Especialista en observabilidad | Especialista cloud | Desarrollador backend
+  }{
+    Observability Specialist | Cloud Specialist | Backend Developer
+  }
 }
-\address{Av. Metropolitana 743, Comas, Lima, Perú}
+\address{Lima, \translate{Perú}{Peru}}
 
 \mobile{(+51) 982042088}
 \email{martin.vuelta@gmail.com}
@@ -83,12 +83,19 @@
 % Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 \input{resume/summary.tex}
-\input{resume/experience.tex}
+\noindent
+
+% \begin{minipage}[t]{.65\textwidth}
+% \end{minipage}\hfill% <---------------- Note the use of "%"
+% \begin{minipage}[t]{.325\textwidth}
+% \end{minipage}
+
 \input{resume/skills.tex}
+\input{resume/experience.tex}
 \input{resume/education.tex}
-\input{resume/courses.tex}
-\input{resume/presentations.tex}
-\input{resume/honors.tex}
+\input{resume/certifications.tex}
+\input{resume/open-source.tex}
+
 
 %-------------------------------------------------------------------------------
 \end{document}

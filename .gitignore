@@ -1,12 +1,6 @@
-### Directories ###
-build/*
-!build/.gitkeep
-!build/*.pdf
-old/
-src/*.pdf
-
-### TeX ###
-## Core latex/pdflatex auxiliary files:
+.*
+!.gitignore
+!.gitkeep
 *.aux
 *.lof
 *.log
@@ -17,16 +11,3 @@ src/*.pdf
 *.fdb_latexmk
 *.synctex.gz
 *.tmp
-
-## Intermediate documents:
-*.dvi
-*-converted-to.*
-
-### Editor ###
-## Vim & Emacs temp files:
-.*sw[op]
-*~
-
-### Mac OS X ###
-## Mac OS X metadata files:
-*.DS_Store
